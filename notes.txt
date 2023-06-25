@@ -20,4 +20,8 @@ project -> right click -> java buildpath -> liberaries -> add external jar -> br
 
 	1) class extends HttpServlet 
 	2) override -> service() 
-	3) mapping -> url 
+	3) mapping -> url
+	
+
+form method => get - default { data pass url }  
+			   post  		 { data basic encrypted without utl }  
