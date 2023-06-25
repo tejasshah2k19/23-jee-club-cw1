@@ -1,0 +1,23 @@
+server -> Logic --> class / java -->  Servlet 
+
+extends Thread 
+extends Exception 
+
+extends HttpServlet
+
+
+HttpServlet -> jar -> servlet-api.jar 
+
+1) tomcat lib 
+2) internet -> WEB-INF/lib
+
+project -> link -> tomcat/lib->servlet-api.jar 
+
+
+project -> right click -> java buildpath -> liberaries -> add external jar -> browser tomcat/lib->servlet-api.jar -> open -> 
+	order and export tab -> select all -> apply and close  
+	
+
+	1) class extends HttpServlet 
+	2) override -> service() 
+	3) mapping -> url 

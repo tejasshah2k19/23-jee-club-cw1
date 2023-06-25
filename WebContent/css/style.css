@@ -1,0 +1,9 @@
+.red{
+	color:red;
+}
+
+.cur{
+	border: 2px solid black;
+	border-color:black;
+	border-radius: 5px;
+}
