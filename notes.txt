@@ -25,3 +25,36 @@ project -> right click -> java buildpath -> liberaries -> add external jar -> br
 
 form method => get - default { data pass url }  
 			   post  		 { data basic encrypted without utl }  
+			   
+---------------------------------------------------------
+
+.jsp -> 	html + java
+ 
+java servlet pages 
+java server pages 
+ 
+		but default it consider all thing as html 
+		
+		then how we can write java code ? 
+		using 
+		1) scriptlet <% %>   -> you can write any logic 
+		2) expression <%= %> -> you can print any java variable on browser 
+		3) declaration <%! %> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
