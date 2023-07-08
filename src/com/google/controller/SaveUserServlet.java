@@ -1,7 +1,9 @@
 package com.google.controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.google.util.DbConnection;
 import com.google.util.Validator;
 
 @WebServlet("/SaveUserServlet")
@@ -54,9 +57,11 @@ public class SaveUserServlet extends HttpServlet {
 		if (Validator.isBlank(password)) {
 			isError = true;
 			error += "Please Enter Password<br>";
-		} else if (Validator.isValidLength(password, 5)) {
+			request.setAttribute("passwordError", "Please Enter Password");
+		} else if (Validator.isValidLength(password, 5) == false) {
 			isError = true;
 			error += "Please Enter Strong Password (atleast 5 in length ) <br>";
+			request.setAttribute("passwordError", "Please Enter Strong Password (atleast 5 in length )");
 		}
 
 		if (country == null || country.equals("-1")) {
@@ -76,28 +81,40 @@ public class SaveUserServlet extends HttpServlet {
 		System.out.println(email);
 		System.out.println(password);
 
-		// response print -> old approach => servlet -> generate html
-
-		response.setContentType("text/html"); // MIME
-
-		PrintWriter out = response.getWriter(); // server --> client
-
-		out.print("<html><body>");
-
 		if (isError == true) {
 //			out.print(error);
 			// goback ->
-			
-			request.setAttribute("error", error) ; //current request->error set 
-			
+			System.out.println(error);
+			request.setAttribute("error", error); // current request->error set
+
 			RequestDispatcher rd = request.getRequestDispatcher("Signup.jsp");
 			rd.forward(request, response);
 
 		} else {
-			out.print("<br>FirstName => " + firstName);
-			out.print("<BR>Email => " + email);
-			out.print("<br>Password =>" + password);
+
+			// db connection
+			Connection con = DbConnection.getConnection();
+
+			// execute query
+			try {
+				PreparedStatement pstmt = con
+						.prepareStatement("insert into users (firstName,email,password,gender) values (?,?,?,?)");
+
+				pstmt.setString(1, firstName);
+				pstmt.setString(2, email);
+				pstmt.setString(3, password);
+				pstmt.setString(4, gender);
+
+				pstmt.executeUpdate(); // 
+				
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+			RequestDispatcher rd = request.getRequestDispatcher("Login.jsp");
+			rd.forward(request, response);
+
 		}
-		out.print("</body></html>");
 	}
 }

@@ -45,6 +45,8 @@
 					<div class="form-group">
 						Password : <input type="password" name="password"
 							class="form-control">
+							
+							<span class="text-danger">${passwordError }</span>
 					</div>
 
 					<div class="form-group">

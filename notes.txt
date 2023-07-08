@@ -42,13 +42,32 @@ java server pages
 		3) declaration <%! %> 
 
 
+-------------------------------
+
+input -> servlet -> read , validate , db store -> login page 
+
+dbConnection -> 
+	add mysql connector jar -> project 
+	connection 
+
+
+1) download mysql connector jar 
+2) copy and paste into web-inf/lib folder 
+3) link that jar into build path { add Jar } 
 
 
 
+create database 23cw1;
 
+use 23cw1; 
 
-
-
+create table users ( 
+	userId integer primary key auto_increment,
+	firstName varchar(30),
+	email varchar(30),
+	password varchar(30),
+	gender varchar(8)
+); 
 
 
 
