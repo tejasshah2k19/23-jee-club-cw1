@@ -79,6 +79,8 @@
 				</form>
 
 				<br> <br> <a href="Login.html">Already Signup? Login</a> <br>
+				<br> <br> <a href="ListUsersServlet">List Users</a> <br>
+				
 				<br>
 				<%-- <div class="text-danger">
 					<%=error == null ? "" : error%>
