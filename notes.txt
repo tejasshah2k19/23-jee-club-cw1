@@ -69,9 +69,33 @@ create table users (
 	gender varchar(8)
 ); 
 
+---------------------------------------------
+age < 18
+	Less Chance 
+	
+18-60
+	gender 
+     male 	female 
+     smoke        25%      
+   yes    no
+  50%     25% 
+
+age > 60 
+diabetic    &&  bp [ both are ] 
+    75%  
+only diabetic 
+   50% 
+
+only bp 
+ 65% 
+no diabetic no bp 
+ 30%  
 
 
+db -> report -> pdf 
 
+---------
+EL -> expression lang -> print data on jsp -> from request,session,application scope
 
 
 
