@@ -97,7 +97,16 @@ db -> report -> pdf
 ---------
 EL -> expression lang -> print data on jsp -> from request,session,application scope
 
+create table patient(
+	patientId integer primary key auto_increment, 
+	name varchar(50),
+	gender varchar(10),
+	age integer(3),
+	smoke integer(1),
+	diabetic integer(1),
+	bp integer(1)
 
+);
 
 
 
