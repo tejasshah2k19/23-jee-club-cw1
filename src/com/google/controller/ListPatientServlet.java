@@ -36,7 +36,9 @@ public class ListPatientServlet extends HttpServlet {
 			out.print("<br><a href='GeneratePatientPDFServlet'>Export PDF</a><br>");
 			
 			out.print("<table border='1'>");
-			out.print("<tr><th>PatientId</th><th>Name</th><tH>Gender</th><th>Age</th></tr>");
+			out.print("<tr><th>PatientId</th><th>Name</th><tH>Gender</th><th>Age</th>"
+					+ "<th>Action</th>"
+					+ "</tr>");
 
 			while (rs.next()) { // 1st row , true -- false
 				int patientId = rs.getInt("patientId");
@@ -49,7 +51,7 @@ public class ListPatientServlet extends HttpServlet {
 				out.print("<td>" + name + "</td>");
 				out.print("<td>" + gender + "</td>");
 				out.print("<td>" + age + "</td>");
-
+				out.print("<td><a href='DeletePatientServlet?patientId="+patientId+"'>Delete</a></td>");	
 				out.print("</tr>");
 			}
 
