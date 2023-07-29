@@ -51,7 +51,7 @@ public class ListPatientServlet extends HttpServlet {
 				out.print("<td>" + name + "</td>");
 				out.print("<td>" + gender + "</td>");
 				out.print("<td>" + age + "</td>");
-				out.print("<td><a href='DeletePatientServlet?patientId="+patientId+"'>Delete</a></td>");	
+				out.print("<td><a href='DeletePatientServlet?patientId="+patientId+"'>Delete</a> | <a href='EditPatientServlet?patientId="+patientId+"'>Edit</a></td>");	
 				out.print("</tr>");
 			}
 

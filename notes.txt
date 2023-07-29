@@ -107,6 +107,63 @@ create table patient(
 	bp integer(1)
 
 );
+------------------------------------------------------------
+jsp -> java servlet page -> 
+
+translation
+compilation
+load class
+create instance
+jspInit
+_jspService
+jspDestroy
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
