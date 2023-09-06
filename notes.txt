@@ -108,26 +108,95 @@ create table patient(
 
 );
 ------------------------------------------------------------
-jsp -> java servlet page -> 
+login -> email | password -> home 
+signup -> welcome mail 
+forgetpassword -> mail otp -> 
 
-translation
-compilation
-load class
-create instance
-jspInit
-_jspService
-jspDestroy
+home -> 
+
+	list product -> 
+	
+	[ X,1212,addtocart ]   [ ]   [  ]   [  ] 
+	
+	[ ]     [ ]  [ ]    [ ]
+
+	
+mycart -> 
+
+	
+----------------------------------------------------------------
+
+logout explicit -> 
+1)  session.invalidate()
+
+
+logout implicit -> idle -> 5 minute -> activity -> destroy-> timeout 
+1)  configuration -> web.xml   { time is in minutes }  
+ <session-config>
+  	 <session-timeout>3</session-timeout>
+  </session-config>
+   
+2)  java -> session.setMaxInactiveInterval();
+				// seconds  
+				//	
+
+----------------------------------------------------------------	
 	
 	
 	
+	AddCookie.jsp 
 	
+				CookieName   [     ] 
+				CookieValue  [     ] 
+				     [submit] 
+				     
+				AddCookieServlet 
+				
+				read cookiename--value 
+				 // maxAge -> delete 
+				browser -> set cookie 
+				    
+	show cookie -> 
 	
+
+----------------------------------------------------------------	
 	
+		FILTER 
+								
+	Signup.jsp			FILTER			SignupServlet
+		fn		data present?			
+		ln		validation			
+		em					
+		pwd					
+			submit				
+							
+							
+	mscit	mca					
+	P2	P1		|	K		D
+				filter			2
+							
+				pre process 			
+	Login.jsp	email		Filter			LoginServlet
+		password		ip location 	pakistan		
+				filter			
+				block ip list			
+							
+							
+							
+							
+							
+							
+	steps : 
+			1) class implements Filter 
+			2) override -> 
+						init() 
+						doFilter() { service } 
+						destroy()
 	
-	
-	
-	
-	
+			3) mapping -> web.xml : annotation 
+			
+			
+		
 	
 	
 	
