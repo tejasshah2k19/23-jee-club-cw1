@@ -195,8 +195,16 @@ logout implicit -> idle -> 5 minute -> activity -> destroy-> timeout
 	
 			3) mapping -> web.xml : annotation 
 			
+----------------------------------------------------------------
+
+request headers-> 
+		when client make request on server 
+				few information will pass in hidden to the server 
+					that information is known as request headers 
+					
+	how my server knows which language? which browser? which os? you are using? 
 			
-		
+-------------------------------------------------------------		
 	
 	
 	
