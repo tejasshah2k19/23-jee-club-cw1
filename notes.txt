@@ -206,7 +206,42 @@ request headers->
 			
 -------------------------------------------------------------		
 	
+jstl -> java standard tag library 
 	
+	<b> <i> <u> 
+	<for>
+	<if>
+	<out>
+	
+		1) core { if case for catch XXX } 
+		2) xml
+		3) sql 
+		4) fmt 
+		5) function 
+		
+	
+1) jstl.jar download -> project -> link => add jar 
+2) import tag using uri 
+
+	
+InputData.jsp 
+	Data : [ 25,32,36,24,29 ] 
+	[submit ] 
+	
+PrintData.jsp 
+	25
+	32
+	36
+	24
+	29
+	
+	
+	
+		
+	
+	
+		
+
 	
 	
 	
