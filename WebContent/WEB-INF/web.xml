@@ -35,4 +35,14 @@
     <servlet-name>PrintRequestHeaderServlet</servlet-name>
     <url-pattern>/PrintRequestHeaderServlet</url-pattern>
   </servlet-mapping>
+
+	<jsp-config>
+		<taglib>
+			 <taglib-uri>www.google.com/emp/tejas</taglib-uri>
+			 <taglib-location>/WEB-INF/stag.tld</taglib-location>
+		</taglib>
+	</jsp-config>
+
+
+
 </web-app>
