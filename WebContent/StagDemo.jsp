@@ -10,5 +10,8 @@
 <body>
 
 <t:greet/>
+
+<br>
+<t:sqr value="10"/>
 </body>
 </html>

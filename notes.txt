@@ -255,6 +255,7 @@ jsp-api.jar [ tomcat / lib ]
 5) jsp use import <%@ taglib %> 
 	
 	
+<sqr value="5"/>  => 25 	
 	
 	
 	

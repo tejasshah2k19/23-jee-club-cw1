@@ -10,5 +10,17 @@
 		<tag-class>com.google.stag.GreetTag</tag-class>
 		<body-content>empty</body-content>
 	</tag>
+	
+	<tag>
+		<name>sqr</name>
+		<tag-class>com.google.stag.SqrTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>value</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue> 
+		</attribute>
+	</tag>
+	
 </taglib>
  
